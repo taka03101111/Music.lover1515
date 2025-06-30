@@ -1,63 +1,90 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>名城大学情報工学部非公式HP</title>
-        <meta name="description" content="名城大学情報工学部非公式HP">
-        <meta name="viewport" content="width=device-width">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script src="js/script.js"></script>
-        <link href="css/index.css" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">    
-    </head>
-    <body>
-        <header class="header">
-            <div class="header-inner">
-                <a class="header-logo" href="index.html">
-                    <img src="images/common/logo.png" alt="ロゴ">
-                </a>
-                <button class="toggle-menu-button"></button>
-                <div class="header-site-menu">
-                    <nav class="site-menu">
-                        <ul>
-                            <li><a href="concept.html">コンセプト</a></li>
-                            <li><a href="members.html">メンバー</a></li>
-                            <li><a href="access.html">アクセス</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </header>
-        <main class="main">
-            <nav class="floating">
-                <ul>
-                    <li><a href="#">トップ</a></li>
-                </ul>
-            </nav>
-            <div class="first-view">
-                <div class="first-view-text">
-                    <h1>名城大学情報工学部</h1>
-                    <p>想像以上を，創造しよう．</p>
-                    <div class="lead">
-                        <p>先進プロジェクトコースと情報工学総合コースを完備</p>
-                    </div>
-                </div>
-            </div>
-        </main>
-        <footer class="footer">
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>洋楽エクスプローラー</title>
+    <meta name="description" content="洋楽エクスプローラー">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <link href="css/index.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+ 
+</head>
+<body>
+
+<header class="header">
+    <div class="header-inner">
+        <a class="header-logo" href="index.html">
+            <img src="images/common/gazou2.png" alt="ロゴ">
+        </a>
+        <button class="toggle-menu-button"></button>
+        <div class="header-site-menu">
             <nav class="site-menu">
                 <ul>
-                    <li><a href="concept.html">コンセプト</a></li>
-                    <li><a href="members.html">メンバー</a></li>
-                    <li><a href="access.html">アクセス</a></li>
+                    <li><a href="concept.html">歌いやすい洋楽</a></li>
+                    <li><a href="members.html">おすすめ別の洋楽</a></li>
                 </ul>
             </nav>
-            <a class="footer-logo" href="index.html">
-                <img src="images/common/logo_footer.png" alt="ロゴ">
-            </a>
-            <p class="copyright"><small>&copy;名城大学情報工学部(嘘)</small></p>
-        </footer>
-    </body>
+        </div>
+    </div>
+</header>
+
+<main class="main">
+    <div class="first-view">
+        <div class="first-view-text">
+            <h1>Music.lover1515厳選！！</h1>
+            <p>日々の生活を想像以上に</p>
+            <p>洋楽が好きなかっけえ人間になろう</p>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <p class="footer-access-text">以下のボタンから、サイトにアクセス</p>
+    
+    <div class="footer-images">
+        <a href="concept.html">
+            <img src="images/common/sing.png" alt="歌いたい洋楽" style="width: 150px; border-radius: 10px; margin: 10px;">
+        </a>
+        <a href="members.html">
+            <img src="images/common/listen.png" alt="聞いてて気持ちいい洋楽" style="width: 150px; border-radius: 10px; margin: 10px;">
+        </a>
+    </div>
+
+    <nav class="site-menu">
+        <ul>
+            <li><a href="concept.html">歌いたい洋楽</a></li>
+            <li><a href="members.html">聞いてて気持ちいい洋楽</a></li>
+        </ul>
+    </nav>
+
+    <a class="footer-logo" href="index.html">
+        <img src="images/common/gazou3.png" alt="ロゴ">
+    </a>
+
+    <p class="copyright"><small>&copy; music.lover1515 & わさび</small></p>
+</footer>
+
+<button id="toTopBtn">TOPへ</button>
+
+<script>
+    // スクロール時に「TOPへ」ボタンを表示
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 300) {
+            $('#toTopBtn').fadeIn();
+        } else {
+            $('#toTopBtn').fadeOut();
+        }
+    });
+
+    // 上に戻る動作
+    $('#toTopBtn').click(function() {
+        $('html, body').animate({ scrollTop: 0 }, 600);
+        return false;
+    });
+</script>
+
+</body>
 </html>

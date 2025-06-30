@@ -1,50 +1,6 @@
 @charset "utf-8";
 
-nav.floating {
-    position: absolute;
-    top: 100px;
-    left: 50px;
-    background-color: #d0d0d0;
-}
-
-.first-view {
-    height: calc(100vh - 110px);
-    background-image: url(../images/index/bg_main.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-}
-
-.first-view-text {
-    width: 100%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 40ox;
-    padding-bottom: 80px;
-    color: #ffffff;
-    font-weight: bold;
-    text-shadow: 1px 1px 10px #4b2c14;
-}
-
-.first-view-text h1 {
-    font-family: "Montserrat", sans-serif;
-    font-size: 56px;
-    line-height: 72px;
-}
-
-.first-view-text p {
-    font-size: 18px;
-    margin-top: 20px;
-}
-
-.lead {
-    max-width: 1200px;
-    margin: 60px auto;
-}
-
+/* ========== 共通リセット ========== */
 *,
 ::before,
 ::after {
@@ -62,32 +18,30 @@ a {
     text-decoration: none;
 }
 
-body {
-    font-family: sans-serif;
-    font-size: 16pt;
-    color: #000000;
-    line-height: 1;
-    background-color: #ffffff;
-}
-
 img {
     max-width: 100%;
 }
 
+/* ========== 全体 ========== */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 16pt;
+    color: #000000;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+/* ========== ヘッダー ========== */
 .header-inner {
     max-width: 1200px;
     height: 110px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 40px;
-    padding-right: 40px;
+    margin: 0 auto;
+    padding: 0 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.toggle-menu-button {
-    display: none;
 }
 
 .header-logo {
@@ -95,27 +49,145 @@ img {
     width: 170px;
 }
 
-.site-menu ul {
-    display: flex;
+.toggle-menu-button {
+    display: none;
+    width: 44px;
+    height: 34px;
+    background-image: url(../images/common/icon-menu.png);
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
 }
 
-.site-menu ul li {
-    margin-left: 20px;
-    margin-right: 20px;
+.site-menu ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
 }
 
 .site-menu ul li a {
     font-family: 'Cherry Bomb One', cursive;
+    color: #f0eeee;
+    text-decoration: none;
 }
 
+/* ========== メインビジュアル ========== */
+.first-view {
+    height: calc(100vh - 110px);
+    background: url(../images/common/gazou1.png) no-repeat center center / cover;
+    display: flex;
+    align-items: center;
+}
+
+.first-view-text {
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px 80px;
+    color: #70c7df;
+    font-weight: bold;
+    text-shadow: 1px 1px 10px #4b2c14;
+}
+
+.first-view-text h1 {
+    font-family: 'Cherry Bomb One', cursive;
+    font-size: 6rem; /* ← 大きく変更 */
+    line-height: 1.2;
+}
+
+.first-view-text p {
+    font-size: 25px;
+    margin-top: 25px;
+}
+
+/* ========== フッター ========== */
+.footer {
+    background-color: #24211b;
+    color: #000000;
+    padding: 30px 0 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-images a img {
+    width: 150px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.footer-logo {
+    display: block;
+    width: 235px;
+    margin-top: 60px;
+}
+
+.footer-logo img {
+    width: 120px;
+}
+
+.footer-access-text {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.copyright {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 40px;
+    color: #ffffff;
+}
+
+/* ========== トップへ戻るボタン ========== */
+#toTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    z-index: 99;
+    background-color: #444;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#toTopBtn:hover {
+    background-color: #222;
+}
+
+/* ========== フローティングナビ ========== */
+nav.floating {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    background-color: #d0d0d0;
+}
+
+/* ========== メディアクエリ ========== */
 @media (max-width: 800px) {
     .site-menu ul {
         display: block;
         text-align: center;
     }
 
-    .site-menu li {
-        margin-top: 20px;
+    .site-menu ul li a {
+        color: #1d3557;
+        transition: color 0.3s ease;
+    }
+    .site-menu ul li a:hover {
+        color: #e63946;
+        text-decoration: underline;
     }
 
     .header {
@@ -130,8 +202,7 @@ img {
     }
 
     .header-inner {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding: 0 20px;
         height: 100%;
         position: relative;
     }
@@ -141,10 +212,8 @@ img {
         top: 100%;
         left: 0;
         right: 0;
-        color: #ffffff;
-        background-color: #736e62;
-        padding-top: 30px;
-        padding-bottom: 50px;
+        background-color: #dfc075;
+        padding: 30px 0;
         display: none;
     }
 
@@ -157,7 +226,7 @@ img {
     }
 
     .main {
-        padding-top: 50px;;
+        padding-top: 50px;
     }
 
     .footer-logo {
@@ -170,36 +239,5 @@ img {
 
     .toggle-menu-button {
         display: block;
-        width: 44px;
-        height: 34px;
-        background-image: url(../images/common/icon-menu.png);
-        background-size: 50%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-color: transparent;
-        border: none;
-        border-radius: 0;
-        outline: none;
     }
-}
-.footer {
-    color: #ffffff;
-    background-color: #24211b;
-    padding-top: 30px;
-    padding-bottom: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer-logo {
-    display: block;
-    width: 235px;
-    margin-top: 90px;
-}
-
-.copyright {
-    font-size: 14pt;
-    font-weight: bold;
-    margin-top: 90px;
 }
