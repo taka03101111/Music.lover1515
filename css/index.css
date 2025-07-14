@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-/* ========== 共通リセット ========== */
 *,
 ::before,
 ::after {
@@ -22,7 +21,6 @@ img {
     max-width: 100%;
 }
 
-/* ========== 全体 ========== */
 body {
     font-family: 'Helvetica Neue', sans-serif;
     font-size: 16pt;
@@ -33,7 +31,6 @@ body {
     background-color: #ffffff;
 }
 
-/* ========== ヘッダー ========== */
 .header-inner {
     max-width: 1200px;
     height: 110px;
@@ -74,13 +71,17 @@ body {
     text-decoration: none;
 }
 
-/* ========== メインビジュアル ========== */
 .first-view {
-    .first-view .container{
-        height: 300px;
-        width: 300px;
-        position: relative;
-    }
+    height: calc(100vh - 110px);
+    display: flex;
+    align-items: center;
+}
+
+.first-view .container {
+    height: 300px;
+    width: 300px;
+    position: relative;
+}
 
 .image {
     position: absolute;
@@ -93,47 +94,40 @@ body {
     background-position: center center;
     animation: image-switch-animation 25s infinite;
 }
-    height: calc(100vh - 110px);
-    .first-view .src1 {
-        background-image: url(../images/common/gazou1-1.png) no-repeat center center / cover;
-    }
-    .first-view .src2 {
-        background-image: url(../images/common/gazou1-2.jpg) no-repeat center center / cover;
-    }
-    .first-view .src3 {
-        background-image: url(../images/common/gazou1-3.jpg) no-repeat center center / cover;
-    }
-    .first-view .src4 {
-        background-image: url(../images/common/gazou1-4.jpg) no-repeat center center / cover;
-    }
-    .first-view .src5 {
-        background-image: url(../images/common/gazou1-5.jpg) no-repeat center center / cover;
-    }
-    @keyframes image-switch-animation {
-    0%{ opacity: 0;}
-    5%{ opacity: 1;}
-    25%{ opacity: 1;}
-    30%{ opacity: 0;}
-    100%{ opacity: 0;}
+
+.first-view .src1 {
+    background-image: url(../images/common/gazou1-1.png);
 }
-.image:nth-of-type(1) {
-    animation-delay: 0s;
+
+.first-view .src2 {
+    background-image: url(../images/common/gazou1-2.jpg);
 }
-.image:nth-of-type(2) {
-    animation-delay: 5s;
+
+.first-view .src3 {
+    background-image: url(../images/common/gazou1-3.jpg);
 }
-.image:nth-of-type(3) {
-    animation-delay: 10s;
+
+.first-view .src4 {
+    background-image: url(../images/common/gazou1-4.jpg);
 }
-.image:nth-of-type(4) {
-    animation-delay: 15s;
+
+.first-view .src5 {
+    background-image: url(../images/common/gazou1-5.jpg);
 }
-.image:nth-of-type(5) {
-    animation-delay: 20s;
+
+@keyframes image-switch-animation {
+    0% { opacity: 0; }
+    5% { opacity: 1; }
+    25% { opacity: 1; }
+    30% { opacity: 0; }
+    100% { opacity: 0; }
 }
-    display: flex;
-    align-items: center;
-}
+
+.image:nth-of-type(1) { animation-delay: 0s; }
+.image:nth-of-type(2) { animation-delay: 5s; }
+.image:nth-of-type(3) { animation-delay: 10s; }
+.image:nth-of-type(4) { animation-delay: 15s; }
+.image:nth-of-type(5) { animation-delay: 20s; }
 
 .first-view-text {
     text-align: center;
@@ -148,7 +142,7 @@ body {
 
 .first-view-text h1 {
     font-family: 'Cherry Bomb One', cursive;
-    font-size: 6rem; /* ← 大きく変更 */
+    font-size: 6rem;
     line-height: 1.2;
 }
 
@@ -157,7 +151,6 @@ body {
     margin-top: 25px;
 }
 
-/* ========== フッター ========== */
 .footer {
     background-color: #24211b;
     color: #000000;
@@ -199,7 +192,6 @@ body {
     color: #ffffff;
 }
 
-/* ========== トップへ戻るボタン ========== */
 #toTopBtn {
     display: none;
     position: fixed;
@@ -219,15 +211,6 @@ body {
     background-color: #222;
 }
 
-/* ========== フローティングナビ ========== */
-nav.floating {
-    position: absolute;
-    top: 100px;
-    left: 50px;
-    background-color: #d0d0d0;
-}
-
-/* ========== メディアクエリ ========== */
 @media (max-width: 800px) {
     .site-menu ul {
         display: block;
@@ -238,6 +221,7 @@ nav.floating {
         color: #1d3557;
         transition: color 0.3s ease;
     }
+
     .site-menu ul li a:hover {
         color: #e63946;
         text-decoration: underline;

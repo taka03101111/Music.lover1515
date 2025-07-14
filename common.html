@@ -10,14 +10,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
- 
 </head>
 <body>
-
 <header class="header">
     <div class="header-inner">
         <a class="header-logo" href="index.html">
-            <img src="images/common/gazou2.png" alt="ロゴ">
+            <img src="images/common/gazou2.png" alt="サイトのロゴ">
         </a>
         <button class="toggle-menu-button"></button>
         <div class="header-site-menu">
@@ -30,20 +28,16 @@
         </div>
     </div>
 </header>
-<html>
-    <body>
-    <div class="container">
-        <div class="image src1"></div>
-        <div class="image src2"></div>
-        <div class="image src3"></div>
-        <div class="image src4"></div>
-        <div class="image src5"></div>
-    </div>
-</body>
-</html>
 
 <main class="main">
     <div class="first-view">
+        <div class="container">
+            <div class="image src1"></div>
+            <div class="image src2"></div>
+            <div class="image src3"></div>
+            <div class="image src4"></div>
+            <div class="image src5"></div>
+        </div>
         <div class="first-view-text">
             <h1>Music.lover1515厳選！！</h1>
             <p>日々の生活を想像以上に</p>
@@ -54,13 +48,13 @@
 
 <footer class="footer">
     <p class="footer-access-text">以下のボタンから、サイトにアクセス</p>
-    
+
     <div class="footer-images">
         <a href="concept.html">
-            <img src="images/common/sing.png" alt="歌いたい洋楽" style="width: 150px; border-radius: 10px; margin: 10px;">
+            <img src="images/common/sing.png" alt="歌いたい洋楽">
         </a>
         <a href="members.html">
-            <img src="images/common/listen.png" alt="聞いてて気持ちいい洋楽" style="width: 150px; border-radius: 10px; margin: 10px;">
+            <img src="images/common/listen.png" alt="聞いてて気持ちいい洋楽">
         </a>
     </div>
 
@@ -81,8 +75,7 @@
 <button id="toTopBtn">TOPへ</button>
 
 <script>
-    // スクロール時に「TOPへ」ボタンを表示
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
             $('#toTopBtn').fadeIn();
         } else {
@@ -90,12 +83,10 @@
         }
     });
 
-    // 上に戻る動作
-    $('#toTopBtn').click(function() {
-        $('html, body').animate({ scrollTop: 0 }, 600);
+    $('#toTopBtn').click(function () {
+        $('html, body').animate({scrollTop: 0}, 600);
         return false;
     });
 </script>
-
 </body>
 </html>
