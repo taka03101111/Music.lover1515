@@ -28,7 +28,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    background-color: #000000;
 }
 
 .header-inner {
@@ -67,7 +67,7 @@ body {
 
 .site-menu ul li a {
     font-family: 'Cherry Bomb One', cursive;
-    color: #f0eeee;
+    color: #09aa46;
     text-decoration: none;
 }
 
@@ -135,7 +135,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 50px 20px 80px;
-    color: #70c7df;
+    color: #f12c13;
     font-weight: bold;
     text-shadow: 1px 1px 10px #4b2c14;
 }
