@@ -28,7 +28,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #000000;
+    background-color: #ffffff;
 }
 
 .header-inner {
@@ -67,7 +67,7 @@ body {
 
 .site-menu ul li a {
     font-family: 'Cherry Bomb One', cursive;
-    color: #09aa46;
+    color: #f0eeee;
     text-decoration: none;
 }
 
@@ -75,59 +75,26 @@ body {
     height: calc(100vh - 110px);
     display: flex;
     align-items: center;
-}
-
-.first-view .container {
-    height: 300px;
-    width: 300px;
+    justify-content: center;
     position: relative;
-}
-
-.image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    opacity: 0;
+    overflow: hidden;
     background-size: cover;
-    background-position: center center;
-    animation: image-switch-animation 25s infinite;
+    background-position: center;
+    animation: bg-switch 25s infinite;
+    z-index: 0;
 }
 
-.src1 {
-    background-image: url(../images/common/gazou1-1.png);
+@keyframes bg-switch {
+    0%   { background-image: url(../images/common/gazou1-1.png); }
+    20%  { background-image: url(../images/common/gazou1-1.png); }
+    25%  { background-image: url(../images/common/gazou1-2.jpg); }
+    45%  { background-image: url(../images/common/gazou1-2.jpg); }
+    50%  { background-image: url(../images/common/gazou1-3.jpg); }
+    70%  { background-image: url(../images/common/gazou1-3.jpg); }
+    75%  { background-image: url(../images/common/gazou1-4.jpg); }
+    95%  { background-image: url(../images/common/gazou1-4.jpg); }
+    100% { background-image: url(../images/common/gazou1-5.jpg); }
 }
-
-.src2 {
-    background-image: url(../images/common/gazou1-2.jpg);
-}
-
-.src3 {
-    background-image: url(../images/common/gazou1-3.jpg);
-}
-
-.src4 {
-    background-image: url(../images/common/gazou1-4.jpg);
-}
-
-.src5 {
-    background-image: url(../images/common/gazou1-5.jpg);
-}
-
-@keyframes image-switch-animation {
-    0% { opacity: 0; }
-    5% { opacity: 1; }
-    25% { opacity: 1; }
-    30% { opacity: 0; }
-    100% { opacity: 0; }
-}
-
-.image:nth-of-type(1) { animation-delay: 0s; }
-.image:nth-of-type(2) { animation-delay: 5s; }
-.image:nth-of-type(3) { animation-delay: 10s; }
-.image:nth-of-type(4) { animation-delay: 15s; }
-.image:nth-of-type(5) { animation-delay: 20s; }
 
 .first-view-text {
     text-align: center;
@@ -135,9 +102,11 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 50px 20px 80px;
-    color: #f12c13;
+    color: #70c7df;
     font-weight: bold;
     text-shadow: 1px 1px 10px #4b2c14;
+    z-index: 1;
+    position: relative;
 }
 
 .first-view-text h1 {
