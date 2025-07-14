@@ -95,23 +95,23 @@ body {
     animation: image-switch-animation 25s infinite;
 }
 
-.first-view .src1 {
+.src1 {
     background-image: url(../images/common/gazou1-1.png);
 }
 
-.first-view .src2 {
+.src2 {
     background-image: url(../images/common/gazou1-2.jpg);
 }
 
-.first-view .src3 {
+.src3 {
     background-image: url(../images/common/gazou1-3.jpg);
 }
 
-.first-view .src4 {
+.src4 {
     background-image: url(../images/common/gazou1-4.jpg);
 }
 
-.first-view .src5 {
+.src5 {
     background-image: url(../images/common/gazou1-5.jpg);
 }
 
