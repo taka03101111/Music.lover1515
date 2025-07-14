@@ -73,15 +73,23 @@ body {
 
 .first-view {
     height: calc(100vh - 110px);
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
     overflow: hidden;
+}
+
+.first-view::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     background-size: cover;
     background-position: center;
     animation: bg-switch 25s infinite;
     z-index: 0;
+    opacity: 1;
 }
 
 @keyframes bg-switch {
@@ -97,16 +105,14 @@ body {
 }
 
 .first-view-text {
-    text-align: center;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 50px 20px 80px;
+    position: relative;
+    z-index: 1;
     color: #70c7df;
+    text-align: center;
+    max-width: 1200px;
+    padding: 50px 20px 80px;
     font-weight: bold;
     text-shadow: 1px 1px 10px #4b2c14;
-    z-index: 1;
-    position: relative;
 }
 
 .first-view-text h1 {
