@@ -40,6 +40,13 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+.header .site-menu a {
+    color: #4be3ca; 
+}
+
+.footer .site-menu a {
+    color: #4be3ca;  
+}
 
 .header-logo {
     display: block;
