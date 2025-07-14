@@ -40,13 +40,6 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-.header .site-menu a {
-    color: #4be3ca; 
-}
-
-.footer .site-menu a {
-    color: #4be3ca;  
-}
 
 .header-logo {
     display: block;
@@ -74,7 +67,7 @@ body {
 
 .site-menu ul li a {
     font-family: 'Cherry Bomb One', cursive;
-    color: #f0eeee;
+    color: #75df6f;
     text-decoration: none;
 }
 
