@@ -1,20 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <title>洋楽エクスプローラー</title>
-    <meta name="description" content="洋楽エクスプローラー">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <link href="css/index.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
-
-</head>
-<body>
-
-<header class="header">
+  <header class="header">
     <div class="header-inner">
         <a class="header-logo" href="index.html">
             <img src="images/common/gazou2.png" alt="ロゴ">
@@ -30,6 +17,73 @@
         </div>
     </div>
 </header>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&display=swap" rel="stylesheet">
+
+  <title>洋楽紹介サイト</title>
+  <style>
+
+
+.music-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.music-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 20px rgba(37, 37, 37, 0.2);
+}
+
+.music-info .title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color:black;
+  margin-bottom: 0.3rem;
+}
+
+.music-info .artist {
+  color:darkgrey;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+iframe {
+  width: 100%;
+  height: 80px; /* 統一サイズに */
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 0.5rem;
+}
+
+/* ディスクリプション非表示時 */
+.description.hidden {
+  display: none;
+}
+
+.description {
+  color:black;
+  line-height: 1.4;
+  margin-top: 0.5rem;
+}
+
+    .section-title {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid #333;
+      padding-left: 0.5rem;
+    }
+  </style>
+</head>
+<body>
 
 <h1>🎧 洋楽おすすめコレクション</h1>
 
@@ -386,9 +440,23 @@ Nat King Coleの温かく滑らかなピアノと甘美なヴォーカルが、�
 
 
 
+  <div class="difficulty-section">
+    <div class="section-title">★☆☆☆☆（かんたん）</div>
+    <!-- 音楽カード -->
+  </div>
 
-
-
+  <div class="difficulty-section">
+    <div class="section-title">★★★★★（むずかしい）</div>
+    <div class="music-card">
+      <iframe src="https://open.spotify.com/embed/track/4LRPiXqCikLlN15c3yImP7" allow="autoplay; clipboard-write; encrypted-media;"></iframe>
+      <div class="music-info">
+        <div class="title">Peaches</div>
+        <div class="artist">Justin Bieber ft. Daniel Caesar, Giveon</div>
+        <div class="description hidden">高低差のあるフレーズと滑らかなファルセットが求められる、上級者向けソング。</div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
   function toggleDescription(element) {
