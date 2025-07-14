@@ -95,13 +95,14 @@ body {
 @keyframes bg-switch {
     0%   { background-image: url(../images/common/gazou1-1.png); }
     20%  { background-image: url(../images/common/gazou1-1.png); }
-    22%  { background-image: url(../images/common/gazou1-2.jpg); }
-    45%  { background-image: url(../images/common/gazou1-2.jpg); }
-    47%  { background-image: url(../images/common/gazou1-3.jpg); }
-    70%  { background-image: url(../images/common/gazou1-3.jpg); }
-    72%  { background-image: url(../images/common/gazou1-4.jpg); }
-    95%  { background-image: url(../images/common/gazou1-4.jpg); }
-    97% { background-image: url(../images/common/gazou1-5.jpg); }
+    20%  { background-image: url(../images/common/gazou1-2.jpg); }
+    40%  { background-image: url(../images/common/gazou1-2.jpg); }
+    40%  { background-image: url(../images/common/gazou1-3.jpg); }
+    60%  { background-image: url(../images/common/gazou1-3.jpg); }
+    60%  { background-image: url(../images/common/gazou1-4.jpg); }
+    80%  { background-image: url(../images/common/gazou1-4.jpg); }
+    80% { background-image: url(../images/common/gazou1-5.jpg); }
+    100% { background-image: url(../images/common/gazou1-5.jpg); }
 }
 
 .first-view-text {
